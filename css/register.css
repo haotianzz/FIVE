@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+
+    height: 100%;
+    width: 100%;
+}
+
+.in {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-image: url(../images/Login/login.jpg);
+    background-size: 100% 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #069;
+    outline: 0;
+}
+
+.register-form {
+    position: absolute;
+    z-index: 2;
+    padding: 20px 0;
+    margin: 0 0 0 80px;
+    left: 50%;
+    top: 20%;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.register-form p {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+
+.form-content {
+    padding: 0 30px;
+}
+
+.form-content input {
+    height: 20px;
+    padding: 3px;
+    border: 1px solid #f0f0ef;
+    line-height: 20px;
+}
+
+button {
+    padding: 4px 1em;
+    font-family: 'Microsoft yahei', '新宋体';
+    cursor: pointer;
+    background: #e74165;
+    color: #fff;
+}
+
+.register {
+    width: 100%;
+}
+
+.form-right {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    text-align: right;
+}

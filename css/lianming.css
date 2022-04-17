@@ -1,0 +1,403 @@
+.header {
+    z-index: 4;
+}
+
+.fixedcon {
+    z-index: 3;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+.little-head-menu {
+    display: none;
+}
+
+.header-menu {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.menu-center {
+    position: fixed;
+    display: block;
+}
+
+.menu-left a:nth-child(2) {
+    display: block;
+}
+
+.head-nav {
+    z-index: 4;
+}
+
+.head-nav.changed {
+    top: 40px;
+    opacity: 1;
+}
+
+.body {
+    margin-top: 84px;
+    background-color: #F0F0F0;
+}
+
+.Leftselect {
+    position: absolute;
+    width: 23%;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 1px rgb(0 0 0 / 10%);
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.9em;
+}
+
+.Leftselect a {
+    display: block;
+    text-decoration: none;
+    color: #080808;
+    line-height: 40px;
+}
+
+.Leftselect a:hover {
+    color: #777;
+}
+
+.Leftselect h2 {
+    font-size: 14px;
+    line-height: 40px;
+    border-bottom: 1px solid #d1d4d6;
+    color: #000;
+}
+
+.Leftselect .sizeselect span {
+    line-height: 40px;
+    color: #bbb
+}
+
+.Leftselect .sizeselect a {
+    padding-left: 14px;
+}
+
+.RightList {
+    width: 76%;
+    left: 27%;
+    position: relative;
+}
+
+.listscon {
+    overflow: hidden;
+}
+
+.listitem {
+    width: 31%;
+    margin: 0 .6% 2% .6%;
+    box-shadow: 0 2px 1px rgb(0 0 0 / 10%);
+    text-align: center;
+    overflow: hidden;
+    height: 500px;
+    float: left;
+    position: relative;
+}
+
+.listitem:hover .itemcover {
+    transform: translateX(-100%);
+}
+
+.listitem:hover .bottominfo span:first-child {
+    opacity: 0;
+}
+
+.listitem:hover .bottominfo span:nth-child(2),
+.listitem:hover .bottominfo span:last-child {
+    transform: translateY(-10px);
+}
+
+.itemcover {
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    position: relative;
+    z-index: 2;
+    transition: 1s;
+}
+
+.itemcover a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.bottominfo {
+    width: 100%;
+    height: 4em;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+    color: #666;
+    padding: 8px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.bottominfo span {
+    position: relative;
+    transition: all .3s;
+    display: inline-block;
+    font-family: 'englistFont';
+    font-weight: 600;
+}
+
+.bottominfo span:first-child {
+    color: #080808;
+    line-height: 20px;
+    display: block;
+    font-size: 12px;
+    padding-bottom: 4px;
+    font-weight: normal;
+}
+
+.bottominfo span:last-child {
+    text-decoration: line-through;
+}
+
+.iteminfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iteminfo a {
+    height: 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 30px;
+    color: transparent;
+    background-image: url(../img/listitem-icon.png);
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    transition: all .3s;
+}
+
+.iteminfo a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.iteminfo-head {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.iteminfo-head a:first-child {
+    float: left;
+    margin-left: 10px;
+    padding-left: 2.4em;
+    background-position: left 0;
+}
+
+.iteminfo-head a:first-child:hover {
+    background-position: left -30px;
+}
+
+.iteminfo-head a:last-child {
+    float: right;
+    margin-right: 10px;
+    padding-right: 2.4em;
+    background-position: right -60px;
+}
+
+.iteminfo-head a:last-child:hover {
+    background-position: right -90px;
+}
+
+.iteminfo img {
+    width: 100%;
+}
+
+.RightList .pagecon {
+    padding: 24px 0;
+    text-align: center;
+    font-family: 'englistFont';
+    font-weight: 600;
+}
+
+.RightList .pagecon span,
+.RightList .pagecon a {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+}
+
+.RightList .pagecon span {
+    color: #666;
+}
+
+.RightList .pagecon a:hover {
+    background-color: #e5e5e5;
+    color: #777;
+}
+
+.littletop {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .listitem {
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .listitem {
+        width: 47%;
+    }
+
+    .Leftselect {
+        display: none;
+    }
+
+    .RightList {
+        width: 99%;
+        left: 2%;
+    }
+
+    .listitem {
+        height: 0;
+        padding-bottom: 70%;
+    }
+
+    .itemcover {
+        padding-bottom: 150%;
+    }
+
+    .header-menu,
+    .head-nav {
+        display: none;
+    }
+
+    .little-head-menu {
+        display: block;
+    }
+
+    body {
+        padding-top: 14px;
+    }
+
+    .littletop {
+        display: block;
+    }
+}
+
+.container .littletop {
+    width: 100%;
+    height: 120px;
+    background-color: pink;
+    margin-bottom: 10px;
+}
+
+.container .littletop button {
+    width: 100%;
+    text-align: center;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    height: 50%;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+.sortcon,
+.selectcon {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #666;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.sortcon .cover,
+.selectcon .cover {
+    z-index: -1;
+}
+
+.sortcon h3,
+.selectcon h3 {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sortcon a,
+.selectcon a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    line-height: 56px;
+}
+
+.sortselect,
+.select2 {
+    height: 60%;
+    overflow-y: auto;
+}
+
+.sortcon button,
+.selectcon button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/btn_ok.png) no-repeat;
+    background-size: contain;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    border: 0 !important;
+}
+
+.goods {
+    width: 870px;
+    padding-left: 320px;
+}
+
+.good {
+    width: 276px;
+    height: 488px;
+    float: left;
+    margin-left: 14px;
+    margin-bottom: 24px;
+}
+
+.good-top {
+    width: 100%;
+    height: 100%;
+}
+.good-top :hover {
+    background-size: 0 100%;
+}
+
+.goods :nth-child(1) {
+    background: url(../images/联名/1/bd1.jpg);
+    background-size: 100% 100%;
+}
+.goods :nth-child(1) .good-top {
+    background: url(../images/联名/1/top1.jpg);
+    background-size: 100% 100%;
+    z-index: 999;
+}

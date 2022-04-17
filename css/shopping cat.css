@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #fff;
+    line-height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo {
+    font-size: 30px;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo a {
+    text-decoration: none;
+    color: #666;
+}
+
+.header .rightas {
+    float: right;
+    margin-right: 12px;
+    overflow: hidden;
+}
+
+.header .rightas a {
+    text-decoration: none;
+    color: #666;
+    display: inline-block;
+    margin-left: 1em;
+    font-size: 12px;
+}
+
+.body {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #F4F3F3;
+    padding: 10px 0;
+}
+
+.body .container {
+    width: 85%;
+    background-color: #fff;
+}
+
+.body-top {
+    text-align: center;
+    border-top: 4px solid #e74165;
+}
+
+.whatido {
+    background: url(../img/buy_step_1.png) center center no-repeat;
+    height: 90px;
+    display: none;
+}
+
+.body-top h2 {
+    padding: 24px 0;
+    font-size: 20px;
+}
+
+.pinkcover,
+.basecover {
+    width: 100%;
+}
+
+.basecover {
+    margin: 0 0 0 -10px;
+    padding: 0 10px;
+    background-color: #ed94b8;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.basecover::before,
+.basecover::after {
+    content: "";
+    border-top: 10px solid #ba506c;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    display: block;
+}
+
+.basecover::before {
+    border-right: 10px solid transparent;
+    right: 0px;
+}
+
+.basecover::after {
+    border-left: 10px solid transparent;
+    left: 0px;
+}
+
+.body-center {
+    width: 92.8571%;
+    margin: 0 auto;
+}
+
+.nullinfo {
+    height: 540px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #333;
+}
+
+.nullinfo i {
+    width: 57px;
+    height: 72px;
+    margin-right: 32px;
+    padding-bottom: 24px;
+    vertical-align: middle;
+    background: url(../img/icon_blank.png) no-repeat;
+    overflow: hidden;
+    line-height: 100;
+}
+
+.nullinfo a {
+    text-decoration: none;
+    color: #069;
+}
+
+.body-bottom {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.body-bottom>span {
+    display: block;
+    padding: 24px 0;
+    font-size: 14px;
+    color: #069;
+    background-color: #F4F3F3;
+}
+
+.body-bottom .cando {
+    padding: 24px;
+    text-align: left;
+    background-color: #f4f3f3;
+}
+
+.body-bottom .cando a {
+    text-decoration: none;
+    color: #069;
+}
+
+.body-bottom .cando label {
+    margin-right: 28px;
+}
+
+.total {
+    padding: 24px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.total>div {
+    margin-bottom: 10px;
+}
+
+.selectNum span:nth-child(2) {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.money span:last-child {
+    color: #d7261c;
+    font-size: 24px;
+}
+
+button.givemoney {
+    padding: 4px 36px;
+    background-color: #E74165;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 36px 0;
+    background: url(../img/bg_my_footer.png) left bottom repeat-x #f4f3f3;
+}
+
+.footer .copyright {
+    background: url(../img/brand_fiveplus.png) center 12px no-repeat;
+    color: #818181;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 80px;
+}
+
+.copyright-top a {
+    color: #666;
+    text-decoration: none;
+    line-height: 36px;
+}
+
+.copyright-bottom>* {
+    text-decoration: none;
+    color: #818181;
+    line-height: 36px;
+}
+
+.copyright-bottom a {
+    color: #666;
+}
+
+.mygoods table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.mygoods th {
+    height: 46px;
+    line-height: 46px;
+    border-bottom: 1px solid #f3f3f3;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.col_12_1 {
+    width: 8.3333%;
+}
+
+.col_4_1 {
+    width: 25%;
+}
+
+.col_6_1 {
+    width: 16.6667%;
+}
+
+.align_left {
+    text-align: left;
+}
+
+tbody tr {
+    opacity: 1;
+    transition: all .5s;
+}
+
+tbody td {
+    padding: 6px 0;
+    border-bottom: 1px solid #f3f3f3;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+td .detail>* {
+    display: block;
+    text-align: left;
+}
+
+tbody .showimg a {
+    display: block;
+}
+
+tbody a {
+    text-decoration: none;
+    color: #069;
+}
+
+tbody .num {
+    position: relative;
+}
+
+tbody .num input {
+    width: 46px;
+    height: 16px;
+    line-height: 16px;
+    border: 1px solid #e5e5e5;
+    padding: 2px;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+    vertical-align: top;
+    margin-bottom: 6px;
+}
+
+tbody i {
+    font-size: 1px !important;
+    color: #565756;
+    cursor: pointer;
+}
+
+tbody .up,
+tbody .down {
+    position: absolute;
+    right: 50%;
+    transform: translateX(25px);
+    top: -4.5px;
+}
+
+tbody .up i,
+tbody .down i {
+    color: #cbcbcb;
+}
+
+tbody .down {
+    top: 6px;
+}
+
+.rechoose {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    border: 1px solid #efefef;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #efefef;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.rechoose h3 {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.rechoose_items {
+    overflow: hidden;
+}
+
+.rechoose_items>div {
+    width: 200px;
+    float: left;
+    text-align: center;
+}
+
+.rechooseitem a {
+    display: block;
+    padding: 8px 0;
+}
+
+.rechooseitem button {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    padding: 0;
+    border: 1px solid #666;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #069;
+}
+
+.rechooseitem button.selected {
+    border: 0;
+    color: #e74165;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.rechooseitem button.resetcolor {
+    background-color: #e74165;
+    color: #fff;
+    border: 0;
+}
+
+.rechoosebtns {
+    padding-top: 12px;
+    text-align: center;
+}
+
+.rechoosebtns>button {
+    padding: 6px 1em;
+    cursor: pointer;
+    color: #fff;
+    background-color: #E74165;
+    font-size: 14px;
+    border: 0;
+}

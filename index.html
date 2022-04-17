@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Plus官方购物网</title>
+    <link rel="shortcut icon" href="./images/5➕.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="main-top">
+            <div class="h1">
+                <h1>FIVE PLUS</h1>
+                <div class="icons">
+
+                    <div class="icon1">
+                        <a href="./login.html"><img src="./images/index/icons_01.gif" alt=""></a>
+                    </div>
+                    <div class="icon2">
+                        <a href="" class="gosearch"><img src="./images/index/icons_02.gif" alt=""></a>
+                    </div>
+                    <div class="icon3">
+                        <a href="./shoping cat.html"><img src="./images/index/icons_03.gif" alt=""></a>
+                    </div>
+                    <div class="icon4">
+                        <a href=""><img src="./images/index/icons_04.gif" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="lianjie">
+
+                <ul>
+                    <li>
+                        <a href="./index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="">限时折扣</a>
+                    </li>
+                    <li>
+                        <a href="">新品上市</a>
+                    </li>
+                    <li>
+                        <a href="./lianming.html">联名系列</a>
+                    </li>
+                    <li>
+                        <a href="">王牌S裤</a>
+                    </li>
+                    <li>
+                        <a href="">全部品类</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-lb">
+            <div class="lunbo">
+                <ul class="img">
+                    <li><a><img src="./images/index/1.jpg"></a></li>
+                    <li><a><img src="./images/index/2.jpg"></a></li>
+                </ul>
+
+                <div class="left_btn btn">&lt;</div>
+                <div class="right_btn btn">&gt;</div>
+            </div>
+        </div>
+
+        <div class="main-body">
+            <div class="fenlei">
+                <img src="./images/index/3.jpg" alt="" usemap="fenlei1">
+                <img src="./images/index/4.jpg" alt="" usemap="fenlei2">
+            </div>
+            <map name="fenlei1">
+
+            </map>
+            <div class="new">
+                <img src="./images/index/5.jpg" alt="">
+            </div>
+            <div class="weixin">
+                <img src="./images/index/6.jpg" alt="">
+            </div>
+        </div>
+
+    </main>
+    <div class="footer">
+        <div class="footer-top">
+            <div class="police">
+                <a href="https://beian.miit.gov.cn/">粤ICP备10229258号-2</a>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602001994">
+                    <img src="./img/police.png" alt="">
+                    粤公网安备 44010602001994号
+                </a>
+                <a href="http://img2.fiveplus.com/material/2021/07/30/20210730160621016.png">营业执照</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <span>FIVE PLUS 2019</span>
+            </div>
+            <div>
+                <a href="http://www.trendy-global.com/">TRENDY GLOBAL</a>
+                <a href="#">关于我们</a>
+                <a href="#">隐私声明</a>
+            </div>
+            <div>
+                <a href="#">购物</a>
+                <a href="#">支付</a>
+                <a href="#">配送</a>
+                <a href="#">退换货</a>
+            </div>
+            <div>
+                <span>热线: 400-880-0086</span>
+                <a href="#">在线客服</a>
+            </div>
+        </div>
+
+        <div class="gotop">
+            <a href="#top"><img src="./images/index/btn-gotop.png" alt=""></a>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script>
+
+
+        /*定义位置：由于图片个数与下侧顺序按钮数量一致，可通过位置进行关联*/
+        var index = 0;
+        /*设置每一秒钟自动轮播：
+        1.获取当前位置序号：自加操作；当超过图片最大序号时序号设置为0
+        2.设置下侧顺序按钮及轮播图显示
+        */
+        var time = setInterval(move, 5000);
+        function move() {
+            index++;
+            if (index == 2) {
+                index = 0
+            }
+            $(".img li").eq(index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        };
+        /*当鼠标划入、划出轮播图区域时：
+        1.划入时停止自动轮播
+        2.划出时继续自动轮播
+        */
+        $(".lunbo").hover(function () {
+            clearInterval(time);
+        },
+            function () {
+                time = setInterval(move, 5000);
+            });
+        /*点击右侧按钮时执行*/
+        $(".right_btn").click(function () {
+            move();
+        });
+        /*点击左侧按钮时执行*/
+        function moveL() {
+            index--;
+            if (index == -1) {
+                index = 1
+            }
+            $(".num li").eq(index).addClass("current").siblings().removeClass("current");
+            $(".img li").eq(index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+        }
+        $(".left_btn").click(function () {
+            moveL();
+        });
+    </script>
+</body>
+
+</html>
